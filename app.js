@@ -14,7 +14,7 @@ app.post('/', (req, res) => {
   axios.post(`https://hooks.slack.com/services/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`, {text: `${req.body.text}`})
   .then(function (result) {
 
-    console.log("\nNew Request")
+    console.log(`\nNew Request - ${req.body.text}`)
   })
   res.json(req.body)
 })
